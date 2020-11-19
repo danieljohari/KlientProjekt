@@ -13,10 +13,11 @@ public class KlientProjekt {
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream())); //
         String sentence = inFromUser.readLine(); //sætningen får en værdi her
         outToServer.writeBytes(sentence + '\n'); //Skriver linjen og /n betyder den laver en ny linje.
-        String modifiedSentence = inFromServer.readLine();
+        String fromServer = inFromServer.readLine();
         System.out.println("ORIGINAL: " + sentence);
-       // System.out.println("FROM SERVER: " + modifiedSentence);
-        System.out.println("FROM SERVER: " + modifiedSentence);
+       // System.out.println("FROM SERVER: " + fromServer);
+        System.out.println("FROM SERVER: " + fromServer);
+
     }
 }
 
